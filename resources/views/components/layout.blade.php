@@ -27,8 +27,15 @@
             <a href="">Companies</a>
         </div>
         @auth
-            <div>
+            <div class="flex space-x-6 font-semibold">
                 <a href="/jobs/create">Post a Job</a>
+
+                <form method="post" action="/logout">
+                    @csrf
+                    @method('DELETE')
+
+                    <button>Log Out</button>
+                </form>
             </div>
         @endauth
 

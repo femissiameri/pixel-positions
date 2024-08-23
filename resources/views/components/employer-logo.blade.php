@@ -11,4 +11,4 @@
     }
 @endphp
 
-<img src="{{ $employer->logo }}" alt="{{ $employer->name }} Logo" class="{{$classes}}" />
+<img src="{{ asset('storage/'.$employer->logo) }}" alt="{{ $employer->name }} Logo" class="{{$classes}}" />

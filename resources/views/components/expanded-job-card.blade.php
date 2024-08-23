@@ -12,7 +12,11 @@
             </div>
         </div>
 
-        <h3 class="text-xl font-bold mt-1 group-hover:text-blue-600 transition-colors duration-300">{{ $job->title }}</h3>
+        <h3 class="text-xl font-bold mt-1 group-hover:text-blue-600 transition-colors duration-300">
+            <a href="{{ $job->url }}" target="_blank">
+                {{ $job->title }}
+            </a>
+        </h3>
 
         <div class="flex justify-between items-center mt-10">
             <p class="text-sm text-gray-500">{{ $job->schedule }} - From {{ $job->salary }}</p>
