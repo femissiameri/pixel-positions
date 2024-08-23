@@ -24,6 +24,7 @@ class JobFactory extends Factory
             'salary' => $salary,
             'location' => fake()->randomElement(['Remote', 'On Site']),
             'schedule' => fake()->randomElement(['Full Time', 'Part Time']),
+            'hours' => fake()->numberBetween(8, 44),
             'url' => fake()->url,
             'featured' => fake()->boolean
         ];

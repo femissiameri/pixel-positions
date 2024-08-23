@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('salary');
             $table->string('location');
             $table->string('schedule')->default('Full Time');
+            $table->unsignedSmallInteger('hours')->default(8);
             $table->string('url');
             $table->boolean('featured')->default(false);
             $table->timestamps();

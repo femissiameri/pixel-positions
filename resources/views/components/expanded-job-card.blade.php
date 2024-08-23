@@ -8,7 +8,7 @@
             <div class="self-start text-sm font-medium text-gray-400">{{ $job->employer->name }}</div>
             <div class="space-x-1">
                 <x-tag variant="outline" :name="$job->location" />
-                <x-tag variant="outline" name="22h" />
+                <x-tag variant="outline" :name="$job->hours.'h'" />
             </div>
         </div>
 

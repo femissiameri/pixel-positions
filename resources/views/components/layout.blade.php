@@ -14,7 +14,7 @@
 <body class="bg-slate-950 text-white font-hanken-grotesk">
 
 <div class="px-10">
-    <nav class="flex justify-between items-center py-4 border-b border-white/10 max-w-[986px] mx-auto">
+    <nav class="flex justify-between items-center py-4 max-w-[986px] mx-auto">
         <div>
             <a href="{{ route('jobs.index') }}">
                 <img src="{{ Vite::asset('resources/img/logo.svg') }}" alt="Logo"/>
@@ -26,10 +26,21 @@
             <a href="">Salaries</a>
             <a href="">Companies</a>
         </div>
-        <div>
-            <a href="">Post a Job</a>
-        </div>
+        @auth
+            <div>
+                <a href="/jobs/create">Post a Job</a>
+            </div>
+        @endauth
+
+        @guest
+            <div class="space-x-4 font-semibold">
+                <a href="{{ route('login') }}">Log In</a>
+                <a href="{{ route('register') }}">Sign Up</a>
+            </div>
+        @endguest
     </nav>
+
+    <x-forms.divider class="max-w-[986px] mx-auto" />
 
     <main class="max-w-[986px] mx-auto mt-10">
         {{ $slot }}
