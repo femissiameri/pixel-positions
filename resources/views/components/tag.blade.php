@@ -1,4 +1,4 @@
-@props(['size' => 'sm', 'variant' => 'normal'])
+@props(['name', 'size' => 'sm', 'variant' => 'normal'])
 
 @php
 $classes = 'font-bold inline-flex justify-center rounded-xl transition-colors duration-300';
@@ -21,7 +21,7 @@ $classes = 'font-bold inline-flex justify-center rounded-xl transition-colors du
 @endphp
 
 <a
-    href="#"
+    href="/tags/{{ strtolower($name) }}"
     class="{{ $classes }}">
-    {{ $slot }}
+    {{ $name }}
 </a>

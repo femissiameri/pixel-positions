@@ -28,4 +28,9 @@ class JobFactory extends Factory
             'featured' => fake()->boolean
         ];
     }
+
+    public function featured()
+    {
+        return $this->state(['featured' => true]);
+    }
 }

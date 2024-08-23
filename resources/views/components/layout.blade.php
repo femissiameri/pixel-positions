@@ -16,12 +16,12 @@
 <div class="px-10">
     <nav class="flex justify-between items-center py-4 border-b border-white/10 max-w-[986px] mx-auto">
         <div>
-            <a href="{{ route('home') }}">
+            <a href="{{ route('jobs.index') }}">
                 <img src="{{ Vite::asset('resources/img/logo.svg') }}" alt="Logo"/>
             </a>
         </div>
         <div class="space-x-6 font-semibold">
-            <a href="">Jobs</a>
+            <a href="{{ route('jobs.index') }}">Jobs</a>
             <a href="">Careers</a>
             <a href="">Salaries</a>
             <a href="">Companies</a>

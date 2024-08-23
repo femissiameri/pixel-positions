@@ -1,3 +1,14 @@
-@props(['size' => 100])
+@props(['employer', 'size' => 'md'])
 
-<img src="http://picsum.photos/seed/{{ rand(1, 39948830) }}/{{$size}}" alt="Employer Logo" class="rounded-md" />
+@php
+    $classes = 'rounded-md';
+    if ($size === 'sm') {
+        $classes .= ' w-[42px] h-[42px]';
+    } elseif ($size === 'md') {
+            $classes .= ' w-[100px] h-[100px]';
+    } elseif ($size === 'lg') {
+            $classes .= ' w-[180px] h-[180px]';
+    }
+@endphp
+
+<img src="{{ $employer->logo }}" alt="{{ $employer->name }} Logo" class="{{$classes}}" />
