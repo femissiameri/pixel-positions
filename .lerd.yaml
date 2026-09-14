@@ -1,0 +1,12 @@
+domains:
+  - pixel-positions
+php_version: "8.2"
+node_version: "22"
+framework: laravel
+framework_version: "11"
+services:
+  - mailpit
+  - mysql
+  - redis
+workers:
+  - vite
